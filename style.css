@@ -49,7 +49,10 @@ body {
         translate: -50%;
         cursor: pointer;
 
-        svg {
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             transition: 250ms rotate;
             rotate: 180deg;
             width: 18px;
@@ -103,11 +106,6 @@ body {
             align-items: center;
             justify-content: center;
             color: white;
-
-            svg {
-                width: 24px;
-                height: 24px;
-            }
         }
 
         input {
@@ -175,11 +173,6 @@ body {
                     visibility: hidden;
                     transition: 250ms opacity;
                 }
-
-                svg {
-                    width: 24px;
-                    height: 24px;
-                }
             }
         }
     }
@@ -216,9 +209,10 @@ body {
             background-color: transparent;
             cursor: pointer;
 
-            svg {
-                width: 24px;
-                height: 24px;
+            i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 color: #e55542;
             }
         }
@@ -231,7 +225,10 @@ body {
             width: 30px;
             height: 30px;
             
-            svg {
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 15px;
                 height: 15px;
                 rotate: 0deg;

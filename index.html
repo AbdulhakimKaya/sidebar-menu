@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar Menu</title>
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 <body>
 <aside class="sidebar">
@@ -12,10 +14,7 @@
     <input type="checkbox" name="minimize" id="minimize">
 
     <label class="toggle" for="minimize">
-        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512"
-             xmlns="http://www.w3.org/2000/svg">
-            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-        </svg>
+        <i class="fa-solid fa-chevron-right"></i>
     </label>
 
     <header class="header">
@@ -28,10 +27,7 @@
     <form action="" class="search">
         <label for="minimize"></label>
         <div class="icon">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M337.509 305.372h-17.501l-6.571-5.486c20.791-25.232 33.922-57.054 33.922-93.257C347.358 127.632 283.896 64 205.135 64 127.452 64 64 127.632 64 206.629s63.452 142.628 142.225 142.628c35.011 0 67.831-13.167 92.991-34.008l6.561 5.487v17.551L415.18 448 448 415.086 337.509 305.372zm-131.284 0c-54.702 0-98.463-43.887-98.463-98.743 0-54.858 43.761-98.742 98.463-98.742 54.7 0 98.462 43.884 98.462 98.742 0 54.856-43.762 98.743-98.462 98.743z"></path>
-            </svg>
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
         </div>
         <input type="search">
     </form>
@@ -39,20 +35,15 @@
     <nav class="menu">
         <a href="#" class="active">
             <span class="icon" title="Dashboard">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path
-                        d="M19 5v2h-4V5h4M9 5v6H5V5h4m10 8v6h-4v-6h4M9 17v2H5v-2h4M21 3h-8v6h8V3zM11 3H3v10h8V3zm10 8h-8v10h8V11zm-10 4H3v6h8v-6z"></path></svg>
-            </span>
+                <i class="fa-solid fa-border-all fa-lg"></i>
+                </span>
             <span class="hidden">
                 Dashboard
             </span>
         </a>
         <a href="#">
             <span class="icon" title="Market Overview">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
-                     xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1zm1 12h2V2h-2zm-3 0V7H7v7zm-5 0v-3H2v3z"></path>
-            </svg>
+                <i class="fa-solid fa-chart-simple fa-lg"></i>
             </span>
             <span class="hidden">
                 Market Overview
@@ -60,10 +51,7 @@
         </a>
         <a href="#">
             <span class="icon" title="Analytics">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                     xmlns="http://www.w3.org/2000/svg">
-                <path d="M864 518H506V160c0-4.4-3.6-8-8-8h-26a398.46 398.46 0 0 0-282.8 117.1 398.19 398.19 0 0 0-85.7 127.1A397.61 397.61 0 0 0 72 552a398.46 398.46 0 0 0 117.1 282.8c36.7 36.7 79.5 65.6 127.1 85.7A397.61 397.61 0 0 0 472 952a398.46 398.46 0 0 0 282.8-117.1c36.7-36.7 65.6-79.5 85.7-127.1A397.61 397.61 0 0 0 872 552v-26c0-4.4-3.6-8-8-8zM705.7 787.8A331.59 331.59 0 0 1 470.4 884c-88.1-.4-170.9-34.9-233.2-97.2C174.5 724.1 140 640.7 140 552c0-88.7 34.5-172.1 97.2-234.8 54.6-54.6 124.9-87.9 200.8-95.5V586h364.3c-7.7 76.3-41.3 147-96.6 201.8zM952 462.4l-2.6-28.2c-8.5-92.1-49.4-179-115.2-244.6A399.4 399.4 0 0 0 589 74.6L560.7 72c-4.7-.4-8.7 3.2-8.7 7.9V464c0 4.4 3.6 8 8 8l384-1c4.7 0 8.4-4 8-8.6zm-332.2-58.2V147.6a332.24 332.24 0 0 1 166.4 89.8c45.7 45.6 77 103.6 90 166.1l-256.4.7z"></path>
-            </svg>
+                <i class="fa-solid fa-chart-pie fa-lg"></i>
             </span>
             <span class="hidden">
                 Analytics
@@ -71,15 +59,7 @@
         </a>
         <a href="#">
             <span class="icon" title="Reports">
-                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                     stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
-                <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                <path d="M9 17v-5"></path>
-                <path d="M12 17v-1"></path>
-                <path d="M15 17v-3"></path>
-            </svg>
+                <i class="fa-solid fa-file-lines fa-lg"></i>
             </span>
             <span class="hidden">
                 Reports
@@ -87,31 +67,24 @@
         </a>
         <a href="#">
             <span class="icon" title="Industries">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 32 32"
-                     xmlns="http://www.w3.org/2000/svg"><path
-                        d="M 20 5 L 20 10.46875 L 17 12.25 L 17 9.21875 L 15.5 10.15625 L 12 12.25 L 12 9.21875 L 10.5 10.15625 L 5.5 13.15625 L 5 13.4375 L 5 27 L 27 27 L 27 5 Z M 22 7 L 25 7 L 25 25 L 7 25 L 7 14.53125 L 10 12.75 L 10 15.78125 L 11.5 14.84375 L 15 12.75 L 15 15.78125 L 16.5 14.84375 L 21.5 11.84375 L 22 11.5625 Z M 9 17 L 9 19 L 11 19 L 11 17 Z M 13 17 L 13 19 L 15 19 L 15 17 Z M 17 17 L 17 19 L 19 19 L 19 17 Z M 21 17 L 21 19 L 23 19 L 23 17 Z M 9 21 L 9 23 L 11 23 L 11 21 Z M 13 21 L 13 23 L 15 23 L 15 21 Z M 17 21 L 17 23 L 19 23 L 19 21 Z M 21 21 L 21 23 L 23 23 L 23 21 Z"></path></svg>
-                </span>
+                <i class="fa-solid fa-industry fa-lg"></i>
+            </span>
             <span class="hidden">
                 Industries
             </span>
         </a>
         <a href="#">
             <span class="icon" title="Settings">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                     xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                                              stroke-width="32"
-                                                              d="M262.29 192.31a64 64 0 1 0 57.4 57.4 64.13 64.13 0 0 0-57.4-57.4zM416.39 256a154.34 154.34 0 0 1-1.53 20.79l45.21 35.46a10.81 10.81 0 0 1 2.45 13.75l-42.77 74a10.81 10.81 0 0 1-13.14 4.59l-44.9-18.08a16.11 16.11 0 0 0-15.17 1.75A164.48 164.48 0 0 1 325 400.8a15.94 15.94 0 0 0-8.82 12.14l-6.73 47.89a11.08 11.08 0 0 1-10.68 9.17h-85.54a11.11 11.11 0 0 1-10.69-8.87l-6.72-47.82a16.07 16.07 0 0 0-9-12.22 155.3 155.3 0 0 1-21.46-12.57 16 16 0 0 0-15.11-1.71l-44.89 18.07a10.81 10.81 0 0 1-13.14-4.58l-42.77-74a10.8 10.8 0 0 1 2.45-13.75l38.21-30a16.05 16.05 0 0 0 6-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16 16 0 0 0-6.07-13.94l-38.19-30A10.81 10.81 0 0 1 49.48 186l42.77-74a10.81 10.81 0 0 1 13.14-4.59l44.9 18.08a16.11 16.11 0 0 0 15.17-1.75A164.48 164.48 0 0 1 187 111.2a15.94 15.94 0 0 0 8.82-12.14l6.73-47.89A11.08 11.08 0 0 1 213.23 42h85.54a11.11 11.11 0 0 1 10.69 8.87l6.72 47.82a16.07 16.07 0 0 0 9 12.22 155.3 155.3 0 0 1 21.46 12.57 16 16 0 0 0 15.11 1.71l44.89-18.07a10.81 10.81 0 0 1 13.14 4.58l42.77 74a10.8 10.8 0 0 1-2.45 13.75l-38.21 30a16.05 16.05 0 0 0-6.05 14.08c.33 4.14.55 8.3.55 12.47z"></path></svg>
-                </span>
+                <i class="fa-solid fa-gear fa-lg"></i>
+            </span>
             <span class="hidden">
                 Settings
             </span>
         </a>
         <a href="#">
             <span class="icon" title="Notifications">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path
-                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"></path></svg>
-                </span>
+                <i class="fa-solid fa-bell fa-lg"></i>
+            </span>
             <span class="hidden">
                 Notifications
             </span>
@@ -125,11 +98,7 @@
             <div class="email">test@test.com</div>
         </div>
         <button class="hidden">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path d="m17 7-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"></path>
-            </svg>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
         </button>
     </div>
 </aside>
