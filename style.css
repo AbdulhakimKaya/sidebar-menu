@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    border: none;
+}
+
+html, body {
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+body {
+    padding: 10px;
+}
+
+.sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    background-color: #151515;
+    border-radius: 20px;
+    padding: 0 20px 20px;
+    transition: 250ms width;
+
+    input[name="minimize"] {
+        display: none;
+    }
+
+    .toggle {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+        background-color: #289df7;
+        position: absolute;
+        top: 20px;
+        left: 100%;
+        translate: -50%;
+        cursor: pointer;
+
+        svg {
+            transition: 250ms rotate;
+            rotate: 180deg;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .hidden {
+        opacity: 1;
+        visibility: visible;
+        transition: 250ms opacity, 250ms visibility;
+        white-space: nowrap;
+    }
+
+    .search {
+        position: relative;
+        margin-bottom: 8px;
+
+        label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            z-index: 1;
+            display: none;
+        }
+
+        .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            background-color: rgba(255, 255, 255, .2);
+            border-radius: 4px;
+            outline: none;
+            padding: 0 12px 0 36px;
+            font-size: 14px;
+            color: white;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            height: 40px;
+            border-radius: 4px;
+            color: white;
+
+            &:where(:hover, .active) {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .icon {
+                position: relative;
+                flex-shrink: 0;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    content: attr(title);
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    translate: 28px -50%;
+                    background-color: #111;
+                    padding: 4px 8px;
+                    white-space: nowrap;
+                    border-radius: 4px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 250ms opacity;
+                }
+
+                &::after {
+                    content: '';
+                    border: 4px solid transparent;
+                    border-right-color: #111;
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    translate: 20px -50%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 250ms opacity;
+                }
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: auto;
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .name {
+            font-size: 14px;
+            color: white;
+        }
+        
+        .email {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        button {
+            margin-left: auto;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            cursor: pointer;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                color: #e55542;
+            }
+        }
+    }
+
+    &:has(input[name="minimize"]:checked) {
+        width: 80px;
+
+        .toggle {
+            width: 30px;
+            height: 30px;
+            
+            svg {
+                width: 15px;
+                height: 15px;
+                rotate: 0deg;
+            }
+        }
+
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .search {
+            label {
+                display: block;
+            }
+
+            input {
+                padding-right: 0;
+            }
+        }
+
+        .menu {
+            .icon {
+                &:hover::before, &:hover::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
